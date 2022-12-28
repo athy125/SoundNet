@@ -1,0 +1,231 @@
+body {
+    font-family: 'Montserrat';
+}
+
+h1 {
+    font-size: 3rem;
+    line-height: 1.5;
+    font-weight: 900;
+    color: #FFFFFF;
+}
+
+h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+#title {
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(19, 41, 61, 1) 35%, rgba(0, 212, 255, 1) 100%);
+}
+
+.container-fluid {
+    padding: 3% 15% 7%;
+    overflow: hidden;
+}
+
+
+/* NAVIGATION BAR */
+
+.navbar {
+    padding: 0 0 4.5rem;
+}
+
+.navbar-brand {
+    font-family: 'Ubuntu';
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.nav-item {
+    padding-left: 18px;
+    padding-right: 18px;
+}
+
+.nav-link {
+    font-weight: 300;
+    font-size: 1.2rem;
+}
+
+
+/* DOWNLOAD BUTTONS */
+
+.download-button {
+    margin: 5% 3% 5% 0;
+}
+
+.download-button:hover {
+    color: #fd151b;
+}
+
+
+/* TITLE IMAGE */
+
+.title-image {
+    width: 90%;
+    margin: 3rem 5rem -12rem;
+    transform: rotate(21deg);
+}
+
+
+/* CREATE SECTION */
+
+#create {
+    padding: 7% 15%;
+    align-content: center;
+}
+
+.create-logo {
+    color: #86deb7;
+    font-size: 3rem;
+    padding: 1rem 1rem;
+}
+
+.create-logo:hover {
+    color: #13293d;
+    font-size: 4rem;
+}
+
+.create-whole {
+    text-align: center;
+}
+
+.create-content {
+    color: #8f8f8f;
+    padding: 0 3rem;
+    font-size: 2rem;
+}
+
+.feature-header {
+    font-weight: 800;
+    font-size: 2.5rem;
+}
+
+.create-button {
+    margin: 1rem;
+}
+
+
+/* TESTIMONIAL SECTION */
+
+#research {
+    text-align: center;
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(19, 41, 61, 1) 35%, rgba(0, 212, 255, 1) 100%);
+    color: #FFFFFF;
+}
+
+.research-image {
+    width: 10%;
+    border-radius: 200%;
+    margin: 20px;
+}
+
+.research-image-working {
+    width: 50%;
+    margin: 20px;
+}
+
+#tech {
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(19, 41, 61, 1) 35%, rgba(0, 212, 255, 1) 100%);
+    text-align: center;
+    padding-bottom: 3%;
+}
+
+.tech-logo {
+    width: 15%;
+    margin: 20px 20px 50px;
+}
+
+.carousel-item {
+    padding: 7% 15%;
+}
+
+
+/* author SECTION */
+
+#author {
+    padding: 110px;
+    text-align: center;
+}
+
+.author-col {
+    padding: 3% 2%;
+}
+
+.author-button:hover {
+    color: #86deb7;
+}
+
+.author-image {
+    width: 30%;
+    border-radius: 50%;
+    padding-bottom: 1rem;
+}
+
+.author-icon {
+    font-size: 2rem;
+    padding: 5px;
+}
+
+
+/* MEDIA BREAKPOINTS */
+
+@media (max-width: 1028px) {
+    .title-image {
+        position: static;
+        transform: rotate(0deg);
+    }
+    #title {
+        text-align: center;
+    }
+}
+
+
+/* CALL TO ACTION (paper) SECTION */
+
+#paper {
+    text-align: center;
+    padding: 5.7% 15%;
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(19, 41, 61, 1) 35%, rgba(0, 212, 255, 1) 100%);
+    height: max-content;
+}
+
+.paper-h3 {
+    font-size: 3rem;
+    font-weight: 750;
+    color: #FFFFFF;
+}
+
+.paper-h4 {
+    font-size: 1.5rem;
+    padding: 30px 0 0 0;
+    font-weight: 400;
+    color: #86deb7;
+}
+
+
+/* FOOTER SECTION */
+
+#footer {
+    text-align: center;
+    padding: 30px;
+    background-color: #FFFFFF;
+}
+
+.footer-icon {
+    padding: 0 30px 40px 30px;
+    font-size: 1.5rem;
+}
+
+.footer-icon:hover {
+    color: #fd151b
+}
+
+.copyright-text {
+    color: #8F8F8F;
+    font-weight: 400;
+}
+
+.footer-button:hover {
+    color: #fd151b
+}
