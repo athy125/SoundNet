@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>MusicOne</title>
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.g...static/com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700;900&family=Ubuntu:wght@300;500&display=swap" rel="stylesheet">
+
+    <!-- CSS STYLESHEETS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="../static/home.css">
+
+    <!-- FONT-AWESOME-ICONS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+
+
+
+
+    <!-- FACICON -->
+    <link rel="icon" href="../static/favicon.ico">
+</head>
+
+<body>
+
+    <section id="title">
+        <div class="container-fluid">
+            <!-- Nav Bar -->
+
+            <nav class="navbar navbar-expand-lg navbar-dark">
+                <a class="navbar-brand" href="">MusicOne</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#create">Create</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#research">Research</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#author">Authors</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#paper">Publication</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <!-- Title -->
+
+            <div class="row">
+
+                <div class="col-lg-6">
+                    <h1>Create music with a click of a button! <br>Music simplified!</h1>
+                    <button onclick="location.href='paper.pdf'" type="button" class="btn btn-outline-light btn-lg download-button"><i class="fa-regular fa-file"></i> Research Paper</button>
+                </div>
+
+                <div class="col-lg-6">
+                    <img class="title-image" src="../static/home1.jpg" alt="music-home">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- create -->
+
+    <section id="create">
+
+        <div class="row create-row">
+
+            <div class="col-lg-12 create-whole">
+                <button onclick="location.href='../templates/index.html'"" class="create-button">
+                    <i class="fa-solid fa-music create-logo"></i>
+                </button>
+                <h3 class="feature-header"><br> Create Music.</h3>
+                <p class="create-content">Music Generation Using Recurrent Neural Networks</p>
+            </div>
+
+
+
+        </div>
+
+    </section>
+
+
+    <!-- research -->
+
+    <section id="research">
+        <div id="testCarousel" class="carousel slide" data-ride="false">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <h2>Basic Working of the System</h2>
+                    <img class="research-image-working" src="../static/working.png" alt="basicdiagram">
+                </div>
+
+                <div class="carousel-item">
+                    <h2 class="testimonial-text">Dataset</h2>
+                    <h4 class="research-content">Various Piano MIDI files are provided as the dataset. As a MIDI file just conveys player information, such as 'note on' and 'note off,' it is more compact, easy to edit, and can be tailored to any instrument</h4>
+                </div>
+
+                <div class="carousel-item">
+                    <h2 class="testimonial-text">Data Pre-processing</h2>
+                    <h4 class="research-content">Data preprocessing in Machine Learning refers to the technique of preparing (cleaning and organizing) the raw data to make it suitable for a building and training Machine Learning models.
+                    </h4>
+                </div>
+
+                <div class="carousel-item">
+                    <h2 class="testimonial-text">Notes Extraction</h2>
+                    <h4 class="research-content">Data is extracted from the MIDI files using the music21 toolkit. It is converted to stream object which will be used to extract the notes.</h4>
+
+                </div>
+
+                <div class="carousel-item">
+                    <h2 class="testimonial-text">I/O Sequence Generation</h2>
+                    <h4 class="research-content">Each note is assigned to an unqiue integer. Next, we will create an array of input and output sequences to train our model. Each input sequence will consist of 100 notes, while the output array stores the 101st note for the corresponding
+                        input sequence.</h4>
+                </div>
+
+                <div class="carousel-item">
+                    <h2 class="testimonial-text">Model Training</h2>
+                    <h4 class="research-content">We will use Keras to build our model architecture. We use a character level-based architecture to train the model. So each input note in the music file is used to predict the next note in the file.Our music model consists of two LSTM
+                        layers with each layer consisting of 128 neurons. We use 'adam' as the optimizer.Adam function is an alternative optimization algorithm that provides more efficient neural network weights by running repeated cycles of “adaptive
+                        prediction.” The model is trained for 200epochs.
+                    </h4>
+                </div>
+
+                <div class="carousel-item">
+                    <h2 class="testimonial-text">Model Training</h2>
+                    <h4 class="research-content">Now that we have trained our model, we can use it to generate new notes. To generate new notes, we need a starting note. So, we randomly pick an integer and pick a random sequence from the input sequence as a starting point. Next,
+                        we use the trained model to predict the next 500 notes.
+                    </h4>
+                </div>
+
+                <a class="carousel-control-prev" href="#testCarousel" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#testCarousel" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+    </section>
+
+
+    <!-- tech -->
+
+    <section id="tech">
+        <img class="tech-logo" src="../static/python.png" alt="python">
+        <img class="tech-logo" src="../static/keras.png" alt="keras">
+        <img class="tech-logo" src="../static/tensorflow.png" alt="tensorflow">
+        <img class="tech-logo" src="../static/numpy.png" alt="numpy">
+
+    </section>
+
+
+    <!-- author -->
+
+    <section id="author">
+
+        <h2>About the Authors</h2>
+        <p>Explore more about the researchers.</p>
+
+
+        <div class="row">
+            <div class="col-lg-4 col-md-6 author-col">
+                <div class="card">
+                    <div class="card-header">
+                        <h4>Atharva M Joshi</h4>
+                    </div>
+                    <div class="card-body">
+                        <img src="../static/atharvajoshi.jpeg" alt="amj" class="author-image">
+                        <p>Final Year Student</p>
+                        <p>Dept Of Computer Engineering</p>
+                        <p>Vishwakarma University,Pune</p>
+                        <button onclick="window.location.href='https://www.linkedin.com/in/athsjoshi/'" type="button" class="btn btn-outline-dark btn-lg col-12 author-button">Read More <i class="fa-brands fa-linkedin author-icon"></i></button>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 author-col">
+                <div class="card">
+                    <div class="card-header">
+                        <h4>Atharva M Gokhale</h4>
+                    </div>
+                    <div class="card-body">
+                        <img src="../static/atharvagokhale.jpg" alt="amg" class="author-image">
+                        <p>Final Year Student</p>
+                        <p>Dept Of Computer Engineering</p>
+                        <p>Vishwakarma University,Pune</p>
+                        <button onclick="window.location.href='https://www.linkedin.com/in/atharva-gokhale-pune/'" type="button" class="btn btn-outline-dark btn-lg col-12 author-button">Read More <i class="fa-brands fa-linkedin author-icon"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 author-col">
+                <div class="card">
+                    <div class="card-header">
+                        <h4>Arnav A Khandekar</h4>
+                    </div>
+                    <div class="card-body">
+                        <img src="../static/arnavkhandekar.jpeg" alt="aak" class="author-image">
+                        <p>Final Year Student</p>
+                        <p>Dept Of Computer Engineering</p>
+                        <p>Vishwakarma University,Pune</p>
+                        <button onclick="window.location.href='https://www.linkedin.com/in/arnav-khandekar-0b4651180/'" type="button" class="btn btn-outline-dark btn-lg col-12 author-button">Read More <i class="fa-brands fa-linkedin author-icon"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 author-col">
+                <div class="card">
+                    <div class="card-header">
+                        <h4>Aalok R Kesarkar</h4>
+                    </div>
+                    <div class="card-body">
+                        <img src="../static/aalokkesarkar.jpeg" alt="ark" class="author-image">
+                        <p>Final Year Student</p>
+                        <p>Dept Of Computer Engineering</p>
+                        <p>Vishwakarma University,Pune</p>
+                        <button onclick="window.location.href='https://www.linkedin.com/in/aalok-kesarkar/'" type="button" class="btn btn-outline-dark btn-lg col-12 author-button">Read More <i class="fa-brands fa-linkedin author-icon"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 author-col">
+                <div class="card">
+                    <div class="card-header">
+                        <h4>Shaunak V Khade</h4>
+                    </div>
+                    <div class="card-body">
+                        <img src="../static/shaunakkhade.jpeg" alt="svk" class="author-image">
+                        <p>Final Year Student</p>
+                        <p>Dept Of Computer Engineering</p>
+                        <p>Vishwakarma University,Pune</p>
+                        <button onclick="window.location.href='https://www.linkedin.com/in/shaunak-khade-160b61188/'" type="button" class="btn btn-outline-dark btn-lg col-12 author-button">Read More <i class="fa-brands fa-linkedin author-icon"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 author-col">
+                <div class="card">
+                    <div class="card-header">
+                        <h4>Noshir Z Tarapore</h4>
+                    </div>
+                    <div class="card-body">
+                        <img src="../static/noshirtarapore.png" alt="nzt" class="author-image">
+                        <p>Professor</p>
+                        <p>Dept Of Computer Engineering</p>
+                        <p>Vishwakarma University,Pune</p>
+                        <button onclick="window.location.href='https://www.linkedin.com/in/noshirtarapore/'" type="button" class="btn btn-outline-dark btn-lg col-12 author-button">Read More <i class="fa-brands fa-linkedin author-icon"></i></button>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+
+    <!-- Call to Action -->
+
+    <section id="paper">
+
+        <h3 class="paper-h3">Read about our publication. </h3>
+        <h4 class="paper-h4">Read on IJRASET's Official website.</h4>
+        <button type="button" onclick="window.location.href='https://www.ijraset.com/best-journal/music-generation-using-recurrent-neural-networks'" class="btn btn-dark btn-lg download-button footer-button"><i class="fa-solid fa-book-open-reader"></i> Read</button>
+
+    </section>
+
+
+    <!-- Footer -->
+
+    <footer id="footer">
+        <div class="footer-logos">
+            <i class="fa-brands fa-twitter footer-icon"></i>
+            <i class="fa-brands fa-facebook footer-icon"></i>
+            <i class="fa-brands fa-instagram footer-icon"></i>
+            <i class="fa-solid fa-envelope footer-icon"></i>
+        </div>
+        <p class="copyright-text">© Copyright 2022 MusicOne</p>
+        <p class="copyright-text">Made with love in VU</p>
+
+
+    </footer>
+
+
+
+    <!-- JAVASCRIPT FILE -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
